@@ -3,7 +3,7 @@
  * Freeform for Craft CMS.
  *
  * @author        Solspace, Inc.
- * @copyright     Copyright (c) 2008-2021, Solspace, Inc.
+ * @copyright     Copyright (c) 2008-2022, Solspace, Inc.
  *
  * @see           https://docs.solspace.com/craft/freeform
  *
@@ -28,25 +28,25 @@ use modules\businesslogic\BusinessLogic;
 
 class PropertyBase extends AbstractSalesforceIntegration
 {
-    const TITLE = 'Propertybase';
-    const LOG_CATEGORY = 'Salesforce';
+    public const TITLE = 'Propertybase';
+    public const LOG_CATEGORY = 'Salesforce';
 
-    const SETTING_CLIENT_ID = 'client_id';
-    const SETTING_CLIENT_SECRET = 'client_secret';
-    const SETTING_USER_LOGIN = 'username';
-    const SETTING_USER_PASSWORD = 'password';
-    const SETTING_CLOSE_DATE = 'close_date';
-    const SETTING_STAGE = 'stage';
-    const SETTING_SANDBOX = 'sandbox';
-    const SETTING_APPEND_ACCOUNT_DATA = 'append_account_data';
-    const SETTING_APPEND_CONTACT_DATA = 'append_contact_data';
-    const SETTING_DOMAIN_DUPLICATE_CHECK_LOGIC = 'domain_duplicate_check_logic';
-    const SETTING_INSTANCE_URL = 'instance_url';
-    const SETTING_DATA_URL = 'data_url';
+    public const SETTING_CLIENT_ID = 'client_id';
+    public const SETTING_CLIENT_SECRET = 'client_secret';
+    public const SETTING_USER_LOGIN = 'username';
+    public const SETTING_USER_PASSWORD = 'password';
+    public const SETTING_CLOSE_DATE = 'close_date';
+    public const SETTING_STAGE = 'stage';
+    public const SETTING_SANDBOX = 'sandbox';
+    public const SETTING_APPEND_ACCOUNT_DATA = 'append_account_data';
+    public const SETTING_APPEND_CONTACT_DATA = 'append_contact_data';
+    public const SETTING_DOMAIN_DUPLICATE_CHECK_LOGIC = 'domain_duplicate_check_logic';
+    public const SETTING_INSTANCE_URL = 'instance_url';
+    public const SETTING_DATA_URL = 'data_url';
 
-    const FIELD_CATEGORY_OPPORTUNITY = 'opportunity';
-    const FIELD_CATEGORY_ACCOUNT = 'account';
-    const FIELD_CATEGORY_CONTACT = 'contact';
+    public const FIELD_CATEGORY_OPPORTUNITY = 'opportunity';
+    public const FIELD_CATEGORY_ACCOUNT = 'account';
+    public const FIELD_CATEGORY_CONTACT = 'contact';
 
     /**
      * Returns a list of additional settings for this integration
@@ -254,7 +254,7 @@ class PropertyBase extends AbstractSalesforceIntegration
                 continue;
             }
 
-            list($_, $category, $handle) = $matches;
+            [$_, $category, $handle] = $matches;
 
             switch ($category) {
                 case self::FIELD_CATEGORY_OPPORTUNITY:
